@@ -5,7 +5,7 @@ export const add = (product) => ({
   product,
 });
 
-export const remove = (product) => ({
+export const remove = (list) => ({
   type: REMOVE_CART,
-  product,
+  list,
 });

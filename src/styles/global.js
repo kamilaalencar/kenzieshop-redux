@@ -7,9 +7,18 @@ export default createGlobalStyle`
     box-sizing:0;
     outline:0;
 }
+:root{
+    --color1: #dcdcdc;
+    --color2: #002e4f;
+    --color3: #0065a2;
+    --color4: #00a5ff;
+    --color5: #00efff;
+    --color6: #312e38;
+    --color7: #ffffff;
+}
 
 body{
-    background-color:#f5f5f5;
+    background-color:var(--color7);
     color:#312e38;
     -webkit-font-smoothing:antialiased !important
 }

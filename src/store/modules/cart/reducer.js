@@ -1,6 +1,6 @@
 import { ADD_CART, REMOVE_CART } from "./actionsTypes";
 
-const initialState = JSON.parse(localStorage.getItem("cart"));
+const initialState = JSON.parse(localStorage.getItem("cart")) || [];
 
 const reducerCart = (state = initialState, action) => {
   switch (action.type) {
@@ -8,8 +8,8 @@ const reducerCart = (state = initialState, action) => {
       const { product } = action;
       return [...state, product];
     case REMOVE_CART:
-      const { remove } = action;
-      return [remove];
+      const { list } = action;
+      return list;
     default:
       return state;
   }

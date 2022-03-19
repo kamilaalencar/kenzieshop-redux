@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-// import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import { removeCartThunk } from "../../store/modules/cart/thunk";
 import { Container } from "./styles";
 
@@ -10,11 +10,12 @@ const CardCart = () => {
 
   const removeProduct = (product) => {
     dispatch(removeCartThunk(product));
+    toast.success("Produto removido do carrinho!");
   };
 
-  const sumPrice = cart
-    .map((item) => item.price)
-    .reduce((accumulator, currentValue) => accumulator + currentValue);
+  const sumPrice = cart.reduce((acc, value) => {
+    return value.price + acc;
+  }, 0);
 
   return (
     <Container>

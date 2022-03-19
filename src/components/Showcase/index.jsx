@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import { addCartThunk } from "../../store/modules/cart/thunk";
 import { Container } from "./styles";
 
@@ -9,6 +10,7 @@ const Showcase = () => {
 
   const handleClick = (product) => {
     dispatch(addCartThunk(product));
+    toast.success("Produto adicionado no carrinho!");
   };
 
   return (

@@ -5,6 +5,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: 500px) {
       flex-direction: row;
@@ -80,6 +82,10 @@ export const Container = styled.div`
           border: 2px solid var(--color2);
           border-radius: 4px;
           margin-left: 10px;
+          :hover {
+            background-color: var(--color7);
+            color: var(--color2);
+          }
 
           @media (min-width: 500px) {
             width: 300px;

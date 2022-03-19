@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (min-width: 650px) {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1044px) {
+    flex-direction: row;
+    margin-left: 100px;
     align-items: center;
   }
 
@@ -54,6 +57,9 @@ export const Container = styled.div`
           margin: 10px;
           cursor: pointer;
           font-weight: bold;
+          :hover {
+            background-color: var(--color7);
+          }
         }
       }
     }
@@ -67,9 +73,11 @@ export const Container = styled.div`
     border: 1px solid var(--color6);
     border-radius: 4px;
 
-    @media (min-width: 650px) {
-      position: relative;
-      bottom: 205px;
+    @media (min-width: 1044px) {
+      position: fixed;
+      right: 100px;
+      top: 50%;
+      margin-top: -9.25em;
     }
     .higher {
       display: flex;
@@ -78,6 +86,7 @@ export const Container = styled.div`
       height: 40px;
       background-color: var(--color2);
       color: var(--color7);
+      padding: 15px;
     }
     .bottom {
       display: flex;
@@ -86,7 +95,7 @@ export const Container = styled.div`
       align-items: center;
       justify-content: space-around;
       background-color: var(--color1);
-
+      padding: 15px;
       span {
         font-weight: bold;
       }
